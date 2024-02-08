@@ -9,16 +9,18 @@ public void draw()
   background(0);
   sierpinski(100,400,value+200);
 }
-
+public void mousePressed(){
+value=0;
+}
 public void mouseDragged(){
   background(0);
-  value=value+5;
+  value=value+1;
   if(value>500)
   value=0;
 }
 public void sierpinski(float x, float y, float len) 
 {
-if(len<=50){
+if(len<=20){
   fill(255);
  triangle(x,y,x+len,y,x+(len/2),y-len); 
 }
